@@ -2,10 +2,18 @@ import {useState} from 'react';
 import "./MyCss.css";
 
 export function MyApp() {
+    const [count, setCount] = useState(0);
+
+    function handleClick() {
+        // alert('You clicked me!');
+        setCount(count+1);
+    }
+
     return (
         <div>
             <h1>Welcome to my app</h1>
-            <MyButton/>
+            <MyButton count={count} onClick={handleClick}/>
+            <MyButton count={count} onClick={handleClick}/>
             <AboutPage/>
             <Profile/>
             <ShoppingList/>
@@ -13,16 +21,9 @@ export function MyApp() {
     );
 }
 
-function MyButton() {
-    const [count, setCount] = useState(0);
-
-    function handleClick() {
-        // alert('You clicked me!');
-        setCount(count+1);
-    }
-    
+function MyButton({count, onClick}) {
     return (
-        <button onClick={handleClick}>
+        <button onClick={onClick}>
             {/*I'm a button*/}
             Clicked {count} times
         </button>
