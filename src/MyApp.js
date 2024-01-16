@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import "./MyCss.css";
 
 export function MyApp() {
@@ -13,14 +14,17 @@ export function MyApp() {
 }
 
 function MyButton() {
-    // 외부 내부 작성 위치 무관
+    const [count, setCount] = useState(0);
+
     function handleClick() {
-        alert('You clicked me!');
+        // alert('You clicked me!');
+        setCount(count+1);
     }
     
     return (
         <button onClick={handleClick}>
-            I'm a button
+            {/*I'm a button*/}
+            Clicked {count} times
         </button>
     );
 }
