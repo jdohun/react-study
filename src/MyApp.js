@@ -13,8 +13,13 @@ export function MyApp() {
 }
 
 function MyButton() {
+    // 외부 내부 작성 위치 무관
+    function handleClick() {
+        alert('You clicked me!');
+    }
+    
     return (
-        <button>
+        <button onClick={handleClick}>
             I'm a button
         </button>
     );
