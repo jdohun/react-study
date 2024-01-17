@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import "./MyCss.css";
-import {Hello} from "./children/Hello"
+import Hello from "./children/Hello"
 
 export function MyApp() {
     const [count, setCount] = useState(0);
@@ -87,3 +87,5 @@ function ShoppingList() {
         <ul>{listItems}</ul>
     );
 }
+
+export default MyApp;
