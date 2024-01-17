@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import "./MyCss.css";
+import {Hello} from "./children/Hello"
 
 export function MyApp() {
     const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ export function MyApp() {
             <AboutPage/>
             <Profile/>
             <ShoppingList/>
+            <Hello name="react" />
         </div>
     );
 }
