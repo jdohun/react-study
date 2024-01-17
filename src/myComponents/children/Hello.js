@@ -1,3 +1,3 @@
-export function Hello(props) {
-    return <div style={{color:props.color}}>안녕하세요 {props.name}</div>
+export function Hello({color, name}) {
+    return <div style={{color:color}}>안녕하세요 {name}</div>
 }
