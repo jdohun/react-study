@@ -2,12 +2,12 @@ import {useState} from 'react';
 import "./MyCss.css";
 import Hello from "./children/Hello"
 
-export function MyApp() {
+export const MyApp = () => {
     const [count, setCount] = useState(0);
 
     function handleClick() {
         // alert('You clicked me!');
-        setCount(count+1);
+        setCount(count + 1);
     }
 
     return (
@@ -21,26 +21,26 @@ export function MyApp() {
             <Hello name="react" color="red"/>
         </div>
     );
-}
+};
 
-function MyButton({count, onClick}) {
+const MyButton = ({count, onClick}) => {
     return (
         <button onClick={onClick}>
             {/*I'm a button*/}
             Clicked {count} times
         </button>
     );
-}
+};
 
 // Fragment: 부모 엘리먼트 없이 자식 엘리먼트를 그룹화
-function AboutPage() {
+const AboutPage = () => {
     return (
         <>
             <h1>About</h1>
             <p>Hello there.<br/>How do you do?</p>
         </>
     );
-}
+};
 
 const user = {
     name: 'Hedy Lamarr',
@@ -48,7 +48,7 @@ const user = {
     imageSize: 90,
 };
 
-function Profile() {
+const Profile = () => {
     return (
         <>
             <h1>{user.name}</h1>
@@ -63,7 +63,7 @@ function Profile() {
             />
         </>
     );
-}
+};
 
 const products = [
     {title: 'Cabbage', isFruit: false, id: 1},
@@ -82,10 +82,10 @@ const listItems = products.map(product =>
     </li>
 );
 
-function ShoppingList() {
+const ShoppingList = () => {
     return (
         <ul>{listItems}</ul>
     );
-}
+};
 
 export default MyApp;
