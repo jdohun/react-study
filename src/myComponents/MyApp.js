@@ -18,7 +18,7 @@ export function MyApp() {
             <AboutPage/>
             <Profile/>
             <ShoppingList/>
-            <Hello name="react" />
+            <Hello name="react" color="red"/>
         </div>
     );
 }
